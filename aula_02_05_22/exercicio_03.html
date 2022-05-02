@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 03</title>
+    </head>
+    <body>
+        <p>Digite suas notas:</p>
+        <input type="number" name="" id="text">
+        <input type="number" name="" id="text2">
+        <button onclick="chec()">Checar</button>
+        <p id="p"></p>
+        <script>
+            function chec(){
+                var nota = Number(document.getElementById('text').value);
+                var nota2 = Number(document.getElementById('text2').value);
+                var media = (nota + nota2) / 2;
+                if(media >=0 && media <= 4){
+                    var con = 'E';
+                }else if(media > 4 && media <= 6){
+                    var con = 'D';
+                }else if(media > 6 && media <= 7.5){
+                    var con = 'C';
+                }else if(media > 7.5 && media <= 9){
+                    var con = 'B';
+                }else if(media > 9 && media <=10){
+                    var con = 'A';
+                }
+                if(con == 'D'|| con == 'E'){
+                    var men = 'REPROVADO';
+                }else{
+                    var men = 'APROVADO';
+                }
+                alert(`Suas notas foram ${nota} e ${nota2}, sua média foi ${media}, seu conceito é ${con}, você foi ${men}`);
+            }
+
+        </script>
+    </body>
+</html>
