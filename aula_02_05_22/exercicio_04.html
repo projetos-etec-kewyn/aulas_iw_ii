@@ -19,8 +19,8 @@
                 var b = Number(document.getElementById('b').value);
                 var c = Number(document.getElementById('c').value);
                 var delta = Math.pow(b,2)-4*a*c;
-                var x1 = (0-b +(Math.sqrt(delta)))/(2*a);
-                var x2 = (0-b -(Math.sqrt(delta)))/(2*a);
+                var x1 = (-b + (Math.sqrt(delta)))/(2*a);
+                var x2 = (-b - (Math.sqrt(delta)))/(2*a);
                 var p = document.getElementById('p');
                 p.innerHTML = `O valor x1 é ${x1}<br> O valor x2 é ${x2}`;
             }
