@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 03</title>
+    </head>
+    <body>
+        <button onclick="calcular()">Calcular</button>
+        <p id="q"></p>
+        <script>
+            function calcular(){
+                
+            var a = Number(prompt('Diga a população do país A:'));
+            var b = Number(prompt('Diga a população do país B:'));
+            var t1 = Number(prompt('Diga a taxa de crescimento do país A:'));
+            var t2 = Number(prompt('Diga a taxa de crescimento do país B:'));
+            var num = 0;
+            while(a<b){
+                a += (a*t1/100);
+                b += (b*t2/100);
+                console.log(`País A: ${a}, País B: ${b}`);
+                num++;
+            }
+            document.getElementById('q').innerText = `Serão necessários ${num} anos para ultrapassar o país B.`;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 07</title>
+    </head>
+    <body>
+        <p id="q"></p>
+        <script>
+            var i = 1;
+            var impar = 0;
+            var par = 0;
+            while(i<=10){
+                var num = Number(prompt(`Digite o ${i}º número:`));
+                if(num%2 == 1){
+                    impar+=1;
+                }else{
+                    par+=1;
+                }
+                i++;
+            }
+            var p = document.getElementById('q');
+            p.innerHTML = `Você digitou ${impar} números ímpares e ${par} número pares`;
+
+            
+        </script>
+    </body>
+</html>
