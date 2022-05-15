@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 02</title>
+    </head>
+    <body>
+        <p>Digite seu salário:</p>
+        <input type="number" name="" id="text">
+        <button onclick="chec()">Checar</button>
+        <p id="p"></p>
+        <script>
+            function chec(){
+                var sal = Number(document.getElementById('text').value);
+                var sal2 = sal;
+                if(sal <= 280){
+                    var por = 20;
+                }else if(sal > 280 && sal < 700){
+                    var por = 15;
+                }else if(sal >= 700 && sal < 1500){
+                    var por = 10;
+                }else{
+                    var por = 5;
+                }
+                sal *= ((por/100)+1);
+                var p = document.getElementById('p');
+                p.innerHTML = `Seu salário era de R$ ${sal2} <br> Ganhou um aumento de ${por}% <br> O valor do aumento é R$ ${sal2*por/100} <br> Seu novo salário é R$ ${sal}`;
+            }
+
+        </script>
+    </body>
+</html>
