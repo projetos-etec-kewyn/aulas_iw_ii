@@ -10,14 +10,10 @@
         <script>
             var qntd = Number(prompt('Diga o primeiro número:'));
             let num = [];
-            var i = 0;
-            var dob = qntd * 2;
-            while(qntd<=dob){
-                num[i] = qntd;
-                qntd++;
-                i++;
+            for(i=qntd;i<=qntd*2;i++){
+                num.push(i);
             }
             console.log(num);
         </script>
     </body>
-</html>
+</html> 
